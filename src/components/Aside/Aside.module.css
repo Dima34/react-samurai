@@ -1,0 +1,15 @@
+aside{
+    padding: var(--gap);
+    background: cadetblue;
+    min-height: 100%;
+}
+
+.subnav{
+    margin-top: var(--gap);
+}
+
+
+.nav a.active, .subnav a.active{
+    color: blue;
+    text-decoration: underline;
+}

@@ -1,0 +1,35 @@
+.title, .postInputGroup{
+    margin-bottom: var(--gap);
+}
+
+.profilePosts{
+    margin-top: var(--gap);
+    display: flex;
+    flex-direction: column;
+}
+
+.postInputGroup textarea{
+    resize: none;
+    width: 100%;
+    height: 180px;
+    background: #d3d3d3;
+    border: 0;
+    margin: 0;
+    display: block;
+    margin-bottom: calc(var(--gap) / 2);
+    padding: var(--gap);
+    margin-bottom: var(--gap);
+    font-size: 22px;
+}
+
+.postInputGroup button{
+    display: block;
+    margin-left: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+
+  

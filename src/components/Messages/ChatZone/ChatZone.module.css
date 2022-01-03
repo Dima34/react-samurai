@@ -1,0 +1,41 @@
+.chat{
+    padding: 0 var(--gap);
+    min-height: 740px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.messageZone{
+    height: 100%;
+}
+
+.messages{
+    height: 100%;
+}
+
+
+.respondZone{
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.respondZone textarea{
+    resize: none;
+    width: 100%;
+    height: 100px;
+    background: #d3d3d3;
+    border: 0;
+    margin: 0;
+    display: block;
+    margin-bottom: calc(var(--gap) / 2);
+    padding: var(--gap);
+    margin-bottom: var(--gap);
+    font-size: 22px;
+}
+
+.respondZone button{
+    margin-left: auto;
+}

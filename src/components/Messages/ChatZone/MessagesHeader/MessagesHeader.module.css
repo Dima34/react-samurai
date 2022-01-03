@@ -1,0 +1,18 @@
+.messagesHeader{
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
+    padding: calc(var(--gap) / 2) 0;
+    border-bottom: 1px solid cadetblue;
+}
+
+.messagesHeader img{
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.messagesHeader p{
+    font-size: 22px;
+}
