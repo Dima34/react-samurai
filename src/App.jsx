@@ -8,7 +8,8 @@ import Music from "./components/Music/Music";
 import News from "./components/News/News";
 import Profile from "./components/Profile/Profile";
 import Settings from "./components/Settings/Settings";
-import Users from "./components/Users/Users";
+import UsersContainer from "./components/Users/UsersContainer";
+
 
 function App(p) {
 
@@ -51,7 +52,7 @@ function App(p) {
                 <Route
                   path="/users/*"
                   element={
-                    <Users/>
+                    <UsersContainer/>
                   }
                 />
                 <Route path="/news" element={<News />} />

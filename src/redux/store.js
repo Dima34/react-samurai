@@ -57,7 +57,20 @@ let store = {
             ]  
         },
         
-          
+        users:[
+            {
+                name: "Dima",
+                avatarUrl: "/img/avatar.jpg"
+            },
+            {
+                name: "Sasha",
+                avatarUrl: "/img/avatar.jpg"
+            },
+            {
+                name: "Maks",
+                avatarUrl: "/img/avatar.jpg"
+            },
+        ] 
     },
 
     getState(){

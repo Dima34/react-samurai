@@ -7,54 +7,29 @@ let initialState = {
     users: {
         UsersList: [
             {
-                avatar: "",
-                name: "",
-                status: "",
-                location: "",
+                avatarUrl: "/img/avatar.jpg",
+                name: "Dima",
+                status: "Good day!",
+                location: "Kyiv",
                 followed: true,
                 id: 1,
             },
             {
-                avatar: "",
-                name: "",
-                status: "",
-                location: "",
+                avatarUrl: "/img/avatar.jpg",
+                name: "Maks",
+                status: "Good Night!",
+                location: "Kyiv",
                 followed: false,
                 id: 2,
             },
             {
-                avatar: "",
-                name: "",
-                status: "",
-                location: "",
+                avatarUrl: "/img/avatar.jpg",
+                name: "Dima",
+                status: "Good Evening!",
+                location: "Kyiv",
                 followed: false,
                 id: 3,
             },
-            {
-                avatar: "",
-                name: "",
-                status: "",
-                location: "",
-                followed: false,
-                id: 4,
-            },
-            {
-                avatar: "",
-                name: "",
-                status: "",
-                location: "",
-                followed: true,
-                id: 5,
-            },
-            {
-                avatar: "",
-                name: "",
-                status: "",
-                location: "",
-                followed: true,
-                id: 6,
-            },
-        
         ]
             
     }
@@ -63,10 +38,11 @@ let initialState = {
 }
 
 const userReducer = (state = initialState, action) =>{
-
+    console.log(`state is - `,state);
+    let stateCopy
     switch(action.type){
         case FOLLOW:
-            let stateCopy = {...state, users:{...state.users}}
+            stateCopy = {...state, users:{...state.users}}
             stateCopy.users.UsersList=state.users.UsersList.map(u=>{
                 if(u.id === action.userId){
                     // let userCopy = {...u}
@@ -74,22 +50,27 @@ const userReducer = (state = initialState, action) =>{
                     // return userCopy
                     // or just
 
-                    return {...u, followed=true}
+                    return {...u, followed:true}
                 }
                 return u
             })
+            return stateCopy
 
         case UNFOLLOW:
-            let stateCopy = {...state, users:{...state.users}}
+            stateCopy = {...state, users:{...state.users}}
             stateCopy.users.UsersList=state.users.UsersList.map(u=>{
                 if(u.id === action.userId){
-                    return {...u, followed=false}
+                    return {...u, followed:false}
                 }
                 return u
             })
+            return stateCopy
 
         case SET_USERS:
-            return {...state, users: [...action.users, ...state.users]}// тут мы склеиваем 2 массива: старый который был + новый что пришел
+            stateCopy = {...state}
+            stateCopy.users.UsersList = [...action.users.UsersList, ...state.users.UsersList] // тут мы склеиваем 2 массива: старый который был + новый что пришел
+            
+            return stateCopy
         default: 
             return state
     }
