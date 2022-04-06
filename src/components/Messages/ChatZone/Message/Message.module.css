@@ -1,23 +1,23 @@
 .message{
-    width: 100%;
-    display: flex;
-    gap: var(--gap);
+  width: 100%;
+  display: flex;
+  gap: var(--gap);
 }
 
 .messageAvatar{
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .messageHeader{
-    display: flex;
-    gap: calc(var(--gap) / 2);
-    align-items: center;
-    margin-top: 6px;
+  display: flex;
+  gap: calc(var(--gap) / 2);
+  align-items: center;
+  margin-top: 6px;
 }
 
 .messageTime{
-    color: #818c99;
+  color: #818c99;
 }

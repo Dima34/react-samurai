@@ -3,7 +3,7 @@ import MessageList from "./MessageList";
 
 const mapStateToProps = (props) =>{
   return {
-    dialogList : props.messages.interlocutorData
+  dialogList : props.messages.interlocutorData
   }
 }
 

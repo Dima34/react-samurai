@@ -6,18 +6,18 @@ import StoreContext from "../../StoreContext";
 const Profile = (p) => {
 
   return (
-    <section className="profile">
-      <div
-        className={s.intro}
-        style={{ backgroundImage: "url('./img/city-image.jpg')" }}
-      ></div>
+  <section className="profile">
+    <div
+    className={s.intro}
+    style={{ backgroundImage: "url('./img/city-image.jpg')" }}
+    ></div>
 
-      <ProfileAbout />
+    <ProfileAbout />
 
-      <PostBlockContainer/>
-      
-      
-    </section>
+    <PostBlockContainer/>
+    
+    
+  </section>
   );
 };
 

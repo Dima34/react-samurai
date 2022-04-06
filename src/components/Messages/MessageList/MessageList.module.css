@@ -1,13 +1,13 @@
 .messageList{
-    
-    border-right: 2px solid cadetblue;
+  
+  border-right: 2px solid cadetblue;
 }
 
 .messageList h2{
-    margin-bottom: var(--gap);
+  margin-bottom: var(--gap);
 }
 
 .messageList li{
-    margin-bottom: calc(var(--gap) / 2);
+  margin-bottom: calc(var(--gap) / 2);
 }
 

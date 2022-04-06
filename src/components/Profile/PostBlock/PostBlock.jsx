@@ -7,30 +7,30 @@ const PostBlock = (p) => {
   let newPostTextarea = React.createRef()
 
   let addPost = () =>  {
-    p.addPost()
-    newPostTextarea.current.value=""
-    p.updateNewPostText(newPostTextarea.current)
+  p.addPost()
+  newPostTextarea.current.value=""
+  p.updateNewPostText(newPostTextarea.current)
   }
 
 
   return (
-    <section className={s.profilePosts}>
-      <h2 className={s.title}>My posts</h2>
+  <section className={s.profilePosts}>
+    <h2 className={s.title}>My posts</h2>
 
-      <div className={s.postInputGroup}>
-        <textarea
-          placeholder="So... What u gonna write here today?..."
-          name=""
-          ref={newPostTextarea}
-          onChange= {()=>{ 
-            return p.updateNewPostText(newPostTextarea.current)
-          }}
-        ></textarea>
-        <button onClick={()=>{addPost()}}>Post</button>
-      </div>
+    <div className={s.postInputGroup}>
+    <textarea
+      placeholder="So... What u gonna write here today?..."
+      name=""
+      ref={newPostTextarea}
+      onChange= {()=>{ 
+      return p.updateNewPostText(newPostTextarea.current)
+      }}
+    ></textarea>
+    <button onClick={()=>{addPost()}}>Post</button>
+    </div>
 
-      <PostList posts={p.posts} />
-    </section>
+    <PostList posts={p.posts} />
+  </section>
   );
 };
 

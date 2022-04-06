@@ -4,18 +4,18 @@ import PostBlock from "./PostBlock";
 
 let mapStateToProps = (state)=>{
   return {
-    posts : state.profile.postsData
+  posts : state.profile.postsData
   }
 }
 
 let mapDispatchToProps = (dispatch)=>{
   return {
-    updateNewPostText : (textarea) => {
-      dispatch(updateNewPostTextActionCreator(textarea))
-    },
-    addPost : () => {
-      dispatch(addPostActionCreator())
-    }
+  updateNewPostText : (textarea) => {
+    dispatch(updateNewPostTextActionCreator(textarea))
+  },
+  addPost : () => {
+    dispatch(addPostActionCreator())
+  }
   }  
 }
 

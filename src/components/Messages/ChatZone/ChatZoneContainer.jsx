@@ -8,18 +8,18 @@ import ChatZone from "./ChatZone";
 
 const mapStateToProps = (state)=>{
   return {
-    messages : state.messages.messagesList
+  messages : state.messages.messagesList
   }
 }
 
 const mapDispatchToProps = (dispatch)=>{
   return {
-    addMessageAction : ()=>{
-      dispatch(addMessageActionCreator())
-    },
-    updateNewMessageText : (textarea) =>{
-      dispatch(updateNewMessageTextActionCreator(textarea))
-    } 
+  addMessageAction : ()=>{
+    dispatch(addMessageActionCreator())
+  },
+  updateNewMessageText : (textarea) =>{
+    dispatch(updateNewMessageTextActionCreator(textarea))
+  } 
   }
 }
 

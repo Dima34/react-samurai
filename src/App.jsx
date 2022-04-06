@@ -14,56 +14,56 @@ import UsersContainer from "./components/Users/UsersContainer";
 function App(p) {
 
   let profilePage = ()=>{
-    return(
-      <Profile/>
-    )
+  return(
+    <Profile/>
+  )
   }
   
   return (
-    <BrowserRouter>
-      <div id="App">
-        <Header />
+  <BrowserRouter>
+    <div id="App">
+    <Header />
 
-        <section className="content">
-          <div className="wrapper">
-            <Aside />
+    <section className="content">
+      <div className="wrapper">
+      <Aside />
 
-            <main>
-              <Routes>
-                <Route
-                  path="/"
-                  element={
-                    profilePage()
-                  }
-                />
-                <Route
-                  path="/profile"
-                  element={
-                    profilePage()
-                  }
-                />
-                <Route
-                  path="/messages/*"
-                  element={
-                    <Messages/>
-                  }
-                />
+      <main>
+        <Routes>
+        <Route
+          path="/"
+          element={
+          profilePage()
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+          profilePage()
+          }
+        />
+        <Route
+          path="/messages/*"
+          element={
+          <Messages/>
+          }
+        />
 
-                <Route
-                  path="/users/*"
-                  element={
-                    <UsersContainer/>
-                  }
-                />
-                <Route path="/news" element={<News />} />
-                <Route path="/settings" element={<Settings />} />
-                <Route path="/music" element={<Music />} />
-              </Routes>
-            </main>
-          </div>
-        </section>
+        <Route
+          path="/users/*"
+          element={
+          <UsersContainer/>
+          }
+        />
+        <Route path="/news" element={<News />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/music" element={<Music />} />
+        </Routes>
+      </main>
       </div>
-    </BrowserRouter>
+    </section>
+    </div>
+  </BrowserRouter>
   );
 }
 

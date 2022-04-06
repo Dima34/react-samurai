@@ -1,14 +1,14 @@
 .post{
-    display: flex;
-    gap: var(--gap);
-    margin-bottom: calc(var(--gap) * 2);
+  display: flex;
+  gap: var(--gap);
+  margin-bottom: calc(var(--gap) * 2);
 }
 
 .postAvatar{
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .postText{
